@@ -1,6 +1,6 @@
 # Wondering what the variables are? 
 
-Variable descriptions are in `ccm_variable_descriptions.csv`. This covers _most_ of the variables in the datasets.
+For the files with "ccm" in the name, variable descriptions are in `ccm_variable_descriptions.csv`. This covers _most_ of the variables in the datasets.
 
 The patent variables in `two_pat_vars.csv`:
 - Patent stock: $stock_t = (1-d)*stock_{t-1} + flow_t$ where $flow_t$ is the number of patents the firm received that year and $d_t$ is 15%.
