@@ -26,15 +26,6 @@ capture log close
 
 	local fyear_lo 2019
 	local fyear_hi 2022
-	local query "SELECT * FROM comp.funda cst WHERE cst.indfmt = 'INDL'    AND cst.datafmt = 'STD'    AND cst.popsrc = 'D'    AND cst.consol = 'C'     AND cst.fyear BETWEEN `fyear_lo' AND `fyear_hi' ORDER BY cst.gvkey, cst.datadate"
-
-	clear
-	odbc load, exec( "`query'"	) dsn("wrds-pgdata-64")
-
-
-
-	local fyear_lo 2019
-	local fyear_hi 2022
 	local query "SELECT lnk.lpermno, lnk.lpermco, cst.* FROM crsp.ccmxpf_lnkhist lnk INNER JOIN comp.funda cst ON lnk.gvkey = cst.gvkey WHERE lnk.linktype IN ('LU', 'LC')    AND lnk.linkprim IN ('P', 'C')    AND lnk.linkdt <= cst.datadate    AND (cst.datadate <= lnk.linkenddt OR lnk.linkenddt IS NULL )   AND cst.indfmt = 'INDL'    AND cst.datafmt = 'STD'    AND cst.popsrc = 'D'    AND cst.consol = 'C'     AND cst.fyear BETWEEN `fyear_lo' AND `fyear_hi' ORDER BY lnk.gvkey, cst.datadate"
 
 	clear
