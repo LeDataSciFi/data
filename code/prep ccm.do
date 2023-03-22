@@ -53,7 +53,7 @@
 	*keep $ccmvars at_raw raw_* /* note: raw_* are CDWY vars) */
 	
 	// identifying info
-	global ccmvars 		"         datadate lpermno lpermco gvkey fyear sic sic3 gdpdef age"
+	global ccmvars 		"         datadate lpermno lpermco gvkey tic fyear sic sic3 gdpdef age"
 	// financing info
 	global ccmvars 		"$ccmvars td me td_a td_mv l_a l_sale prof_a mb ppe_a cash_a div_d xrd_a dltt_a capx_a"
 	global ccmvars 		"$ccmvars dv_a dltt_a invopps_FG09 sales_g l_reala l_reallongdebt short_debt long_debt_dum "
